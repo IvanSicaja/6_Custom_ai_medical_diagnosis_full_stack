@@ -1,0 +1,8 @@
+https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection
+https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images
+https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia
+
+Used datasets for training:
+Br35H.csv
+melanoma_cancer.csv
+chest_xray.csv

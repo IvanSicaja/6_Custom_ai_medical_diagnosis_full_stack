@@ -1,0 +1,38 @@
+show unify images
+show learning curves and code
+
+cd C:\Users\Sicaja\Desktop\SmartCodeACADEMY\0.0_Channel_topics\6_FullStackCancerPrediction\2.0_DockerAndk8s
+
+docker login
+docker images -a
+docker build --no-cache -t ivansicaja/custom-ai-medical-diagnosis:1.0.0 .
+docker images -a
+docker run ivansicaja/custom-ai-medical-diagnosis:1.0.0
+
+@FOR /F "tokens=*" %i IN ('minikube docker-env') DO @%i
+minikube start --driver=docker
+minikube status
+minikube image load ivansicaja/custom-ai-medical-diagnosis:1.0.0
+
+minikube mount C:\Users\Sicaja\Desktop\SmartCodeACADEMY\0.0_Channel_topics\6_FullStackCancerPrediction\2.0_DockerAndk8s\instance:/mnt/data
+minikube ssh
+cd /mnt/data
+ls -l
+
+show db with 
+
+docker
+kubectl apply -f deployment.yaml
+
+kubectl get deployments
+kubectl get services
+kubectl get nodes
+kubectl get pods
+minikube service customaichatbot-service
+
+check db
+	
+start minikube dashboard
+kubectl get pods
+kubectl get hpa
+

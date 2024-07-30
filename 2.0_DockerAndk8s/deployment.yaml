@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custom-ai-medical-diagnosis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: custom-ai-medical-diagnosis
+  template:
+    metadata:
+      labels:
+        app: custom-ai-medical-diagnosis
+    spec:
+      containers:
+      - name: custom-ai-medical-diagnosis
+        image: ivansicaja/custom-ai-medical-diagnosis:1.0.0  # Updated image name and tag
+        ports:
+        - containerPort: 5000
+        volumeMounts:
+        - name: medical-db-volume
+          mountPath: /app/instance/medical.db # Mount the database file inside the container
+        resources:
+          requests:
+            cpu: "100m"
+          limits:
+            cpu: "500m"
+      volumes:
+      - name: medical-db-volume
+        hostPath:
+          path: /mnt/data/medical.db # Replace with the path to your host directory containing medical.db
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: custom-ai-medical-diagnosis-service
+spec:
+  selector:
+    app: custom-ai-medical-diagnosis
+  ports:
+    - protocol: TCP
+      port: 5000
+      targetPort: 5000
+      nodePort: 30007  # Optional: Specify a nodePort or let Kubernetes assign one
+  type: NodePort
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: custom-ai-medical-diagnosis-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: custom-ai-medical-diagnosis
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 50

@@ -1,0 +1,7 @@
+.idea/
+.venv/
+/1.0_Development/0_Datasets/*
+!/1.0_Development/0_Datasets/Datasets_download_links.txt
+!/1.0_Development/0_Datasets/Br35H/pred/
+!/1.0_Development/0_Datasets/chest_xray/pred/
+!/1.0_Development/0_Datasets/melanoma_cancer_dataset/pred/
