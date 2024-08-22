@@ -1,3 +1,17 @@
+Source code GitHub:
+https://github.com/IvanSicaja/6_Custom_ai_medical_diagnosis_full_stack
+
+LinkedIn:
+www.linkedin.com/in/ivan-sičaja-832682222
+
+YouTube:
+https://youtu.be/_0w1zhbn-rc
+
+Instagram:
+https://www.instagram.com/_sicaja_photography/
+
+----------------------------------------------------------------------------------------------------------------
+
 Used dataset you can download from the following links:
 https://www.kaggle.com/datasets/ahmedhamada0/brain-tumor-detection
 https://www.kaggle.com/datasets/hasnainjaved/melanoma-skin-cancer-dataset-of-10000-images
