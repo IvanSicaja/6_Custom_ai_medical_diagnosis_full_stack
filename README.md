@@ -1,11 +1,11 @@
 Source code GitHub:
 https://github.com/IvanSicaja/6_Custom_ai_medical_diagnosis_full_stack
 
-LinkedIn:
-www.linkedin.com/in/ivan-sičaja-832682222
-
 YouTube:
 https://youtu.be/_0w1zhbn-rc
+
+LinkedIn:
+www.linkedin.com/in/ivan-sičaja-832682222
 
 Instagram:
 https://www.instagram.com/_sicaja_photography/
